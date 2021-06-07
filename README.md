@@ -3,6 +3,7 @@
 Updated the test scenarios under src/test/resources/FeatureFiles
 
 # How to execute the code?
+Code can be executed on Mac, Windows & Linux.
 To run the code go to cucumber.Options folder & run the "TestRunner" file will execute all the scenarios.
 
 # Report generation:
