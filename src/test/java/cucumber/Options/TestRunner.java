@@ -1,5 +1,4 @@
 package cucumber.Options;
-
 import io.cucumber.junit.Cucumber;
 import io.cucumber.junit.CucumberOptions;
 import org.junit.runner.RunWith;
@@ -8,6 +7,6 @@ import org.junit.runner.RunWith;
 @CucumberOptions(features="src/test/resources/FeatureFiles",glue={"stepDefinitions"},
         plugin = {"com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:"},
         monochrome = true,
-        tags= "@Regression")
+        tags= "@test")
 public class TestRunner {
 }

@@ -1,9 +1,7 @@
 package stepDefinitions;
 
 import io.cucumber.java.en.Then;
-import io.cucumber.java.eo.Se;
 import org.junit.Assert;
-import org.openqa.selenium.Keys;
 import pages.actions.MenuPageActions;
 import utils.SeleniumDriver;
 
@@ -80,13 +78,8 @@ public class MenuSteps {
             String childWindow = iterator.next();
             if (!parent.equalsIgnoreCase(childWindow)) {
                 SeleniumDriver.getDriver().switchTo().window(childWindow);
-                SeleniumDriver.getDriver().switchTo().alert().accept();
-
             }
         }
-
-
-
     }
 
 
