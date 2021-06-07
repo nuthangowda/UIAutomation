@@ -23,9 +23,9 @@ public class SeleniumDriver {
         if (os.contains("windows")) {
             System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir") + "\\chromedriver_win32" + "\\chromedriver.exe");
         } else if (os.contains("mac")) {
-            System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir") + "\\chromedriver_win32" + "\\chromedriver.exe");
+            System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir") + "\\chromedriver_mac64" + "\\chromedriver");
         } else if (os.contains("linux")) {
-            System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir") + "\\chromedriver_win32" + "\\chromedriver.exe");
+            System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir") + "\\chromedriver_linux64" + "\\chromedriver");
         }
         driver = new ChromeDriver();
         driver.manage().window().maximize();
