@@ -1,7 +1,11 @@
 package stepDefinitions;
 
 import io.cucumber.java.en.Then;
+import io.cucumber.java.en_old.Ac;
 import org.junit.Assert;
+import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
+import org.openqa.selenium.interactions.Actions;
 import pages.actions.MenuPageActions;
 import utils.SeleniumDriver;
 
@@ -69,7 +73,7 @@ public class MenuSteps {
     }
 
     @Then("click on call and close the popup window")
-    public void click_on_call_and_close_the_popup_window() throws AWTException {
+    public void click_on_call_and_close_the_popup_window() throws AWTException, InterruptedException {
         menuPageActions.clickCallLink();
         String parent = SeleniumDriver.getDriver().getWindowHandle();
         Set<String> windowHandles = SeleniumDriver.getDriver().getWindowHandles();
@@ -78,12 +82,11 @@ public class MenuSteps {
             String childWindow = iterator.next();
             if (!parent.equalsIgnoreCase(childWindow)) {
                 SeleniumDriver.getDriver().switchTo().window(childWindow);
-            }
+                }
         }
+        SeleniumDriver.getDriver().switchTo().window(parent);
+
+
+
     }
-
-
-
-
-
 }

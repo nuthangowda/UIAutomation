@@ -14,7 +14,6 @@ import java.io.File;
 public class AfterActions {
     @AfterStep
     public void addScreenshot(Scenario scenario) {
-
         final byte[] screenshot = ((TakesScreenshot)SeleniumDriver.getDriver()).getScreenshotAs(OutputType.BYTES);
         scenario.attach(screenshot, "image/jpeg", "image");
     }

@@ -2,7 +2,13 @@ package utils;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.support.ui.WebDriverWait;
+
+import java.io.File;
+import java.util.HashMap;
+import java.util.Map;
 import java.util.concurrent.TimeUnit;
 
 public class SeleniumDriver {
@@ -21,11 +27,11 @@ public class SeleniumDriver {
 
         String os = System.getProperty("os.name").toLowerCase();
         if (os.contains("windows")) {
-            System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir") + "\\chromedriver_win32" + "\\chromedriver.exe");
+            System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir") + File.separator+ "chromedriver_win32" +File.separator+ "chromedriver.exe");
         } else if (os.contains("mac")) {
-            System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir") + "\\chromedriver_mac64" + "\\chromedriver");
+            System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir") + File.separator+"chromedriver_mac64" +File.separator+ "chromedriver");
         } else if (os.contains("linux")) {
-            System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir") + "\\chromedriver_linux64" + "\\chromedriver");
+            System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir") +File.separator+ "chromedriver_linux64" + File.separator+"chromedriver");
         }
         driver = new ChromeDriver();
         driver.manage().window().maximize();
@@ -58,15 +64,6 @@ public class SeleniumDriver {
             driver.quit();
         }
         seleniumDriver = null;
-    }
-
-    public static void waitForPageToLoad() {
-        try {
-            Thread.sleep(5000);
-        } catch (InterruptedException e) {
-            // TODO Auto-generated catch block
-            e.printStackTrace();
-        }
     }
 
     public static void clearBrowserCache() throws InterruptedException {

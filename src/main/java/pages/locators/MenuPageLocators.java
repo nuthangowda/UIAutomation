@@ -48,7 +48,7 @@ public class MenuPageLocators {
     @FindBy(how = How.CSS, using = "div[id='webview_body'] button[type='button']")
     public WebElement webView;
 
-    @FindBy(how = How.XPATH, using = "//a[normalize-space()='Call']")
+    @FindBy(how = How.LINK_TEXT, using = "Call")
     public WebElement call;
 
 
