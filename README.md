@@ -9,5 +9,8 @@ To run the code go to cucumber.Options folder & run the "TestRunner" file will e
 # Report generation:
 Post executing the code go to test-output folder under the root & open the "Spark folder", open the spark.html & you will find the report with screenshots.
 
-
+# Browser Compatibility:
+ Chrome Browser version: 92.0
+ 
+ 
 
