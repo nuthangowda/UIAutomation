@@ -1,11 +1,7 @@
 package stepDefinitions;
 
 import io.cucumber.java.en.Then;
-import io.cucumber.java.en_old.Ac;
 import org.junit.Assert;
-import org.openqa.selenium.By;
-import org.openqa.selenium.Keys;
-import org.openqa.selenium.interactions.Actions;
 import pages.actions.MenuPageActions;
 import utils.SeleniumDriver;
 
